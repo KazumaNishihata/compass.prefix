@@ -1,0 +1,32 @@
+//don't write vender prefix for Opera  
+$experimental-support-for-opera: false;
+
+//don't write border-radius for all  
+//http://caniuse.com/border-radius
+@mixin border-radius($bs) {
+	$bs: unquote($bs);
+	@include experimental(border-radius, $bs,not -moz,not -webkit, not -o, not -ms, not -khtml, official);
+}
+@mixin border-top-left-radius($bs) {
+	$bs: unquote($bs);
+	@include experimental(border-top-left-radius, $bs,not -moz,not -webkit, not -o, not -ms, not -khtml, official);
+}
+@mixin border-top-right-radius($bs) {
+	$bs: unquote($bs);
+	@include experimental(border-top-right-radius, $bs,not -moz,not -webkit, not -o, not -ms, not -khtml, official);
+}
+@mixin border-bottom-left-radius($bs) {
+	$bs: unquote($bs);
+	@include experimental(border-bottom-left-radius, $bs,not -moz,not -webkit, not -o, not -ms, not -khtml, official);
+}
+@mixin border-bottom-right-radius($bs) {
+	$bs: unquote($bs);
+	@include experimental(border-bottom-right-radius, $bs,not -moz,not -webkit, not -o, not -ms, not -khtml, official);
+}
+
+//don't write box-shadow for all 
+//http://caniuse.com/css-boxshadow
+@mixin box-shadow($bs) {
+	$bs: unquote($bs);
+	@include experimental(box-shadow, $bs,not -moz,not -webkit, not -o, not -ms, not -khtml, official);
+}
